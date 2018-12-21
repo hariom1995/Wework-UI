@@ -1,0 +1,58 @@
+.start-img {
+    display: block;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-para {
+    text-align: -webkit-center;
+    margin-top: 3%;
+    font-size: 21px;
+    color: #616161;
+    font-weight: 500;
+    width: 76%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-start {
+    display: block;
+    margin-top: 4%;
+    margin-left: auto;
+    /* margin-right: auto; */
+    padding: 9px 38px 9px 31px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #00c8b7;
+    border: 2px solid #00c8b7;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    /* width: 22%; */
+}
+
+.view-journey {
+    display: block;
+    margin-top: 11%;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: underline;
+    color: #8c8c8c;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:570px) {
+    .view-journey {
+        display: block;
+        margin-top: -4%;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: underline;
+        color: #8c8c8c;
+        cursor: pointer;
+    }
+
+    /* .view-btn-row {
+    width: 50%;
+} */

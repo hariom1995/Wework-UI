@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--Import Google Icon Font-->
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- external css -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- Bootstrap Css CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Bootstrap JS CDN -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid second-page-header">
+        <h4 class="second-header-heading">Journey name</h4>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-11 center-block d-flex justify-content-center drag-and-drop-container">
+                    <p class="drag-para-cont">
+                        Drag-and-drop your template
+                    </p>
+                </div>
+                <button class="appear-btn" onclick="showRight()">Add event</button>
+                <div class="second-append-block center-block">
+                    <p style="text-align:center">Open</p>
+                    <div class="two-line"></div>
+                    <div class="row row-space">
+                        <div class="yes">
+                            <p class="word">Yes</p>
+                        </div>
+                        <div class="no">
+                            <p class="word">No</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="once-row" id="btn-container">
+                    <div class="wanna-temp">Add Template</div>
+                    <div class="wanna-event">Add Event</div>
+                    <div class="container1">
+                        <span class="drop-container-text">Drop Template</span>
+                        <button class="appear-btn-child">Add event</button>
+                    </div>
+                </div>
+                <div class="row drop-row">
+
+                    <div class="container2">Drop Template</div>
+                </div>
+            </div>
+            <div class="col-md-6 templet-bar-sec">
+                <div class="col-md-12">
+                    <h4 class="templet-bar-heading">Templates</h4>
+                </div>
+                <div class="row">
+                    <div class="first-div">
+                        <p class="templet-id">Template id</p>
+                        <img src="../design-templet/assets/drop.jpg" alt="" class=" img1 img-responsive">
+                    </div>
+                    <div class="second-div">
+                        <p class="templet-id">Template id</p>
+                        <img src="../design-templet/assets/drop1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="third-div">
+                        <p class="templet-id">Template id</p>
+                        <img src="../design-templet/assets/drop1.jpg" alt="" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row top-margin">
+                    <div class="first-div">
+                        <p class="templet-id">Template id</p>
+                        <img src="../design-templet/assets/drop1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="second-div">
+                        <p class="templet-id">Template id</p>
+                        <img src="../design-templet/assets/drop.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="third-div">
+                        <p class="templet-id">Template id</p>
+                        <img src="../design-templet/assets/drop.jpg" alt="" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row top-margin">
+                    <div class="first-div">
+                        <p class="templet-id">Template id</p>
+                        <img src="../design-templet/assets/drop.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="second-div">
+                        <p class="templet-id">Template id</p>
+                        <img src="../design-templet/assets/drop.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="third-div">
+                        <p class="templet-id">Template id</p>
+                        <img src="../design-templet/assets/drop.jpg" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 container-main">
+                <div class="hidden-right-drop" id="drop-cont">
+                    <div class="common-box-event">
+                        <div class="drop-event" id="show-event">&nbsp; Choose events <img src="../design-templet/assets/aero.png"
+                                height="20px" class="img-responsive aero-icon-class pull-right"></div>
+                        <div class="list-container" id="list-cont-id">
+                            <div class="list-design drop-list">&nbsp;&nbsp;&nbsp; <img src="../design-templet/assets/book.png"><span
+                                    class="list-word-spacing">Opened</span></div>
+                            <div class="list-design drop-list">&nbsp;&nbsp; <img src="../design-templet/assets/notopen.png"><span
+                                    class="list-word-spacing">Not
+                                    Opened</span></div>
+                            <div class="list-design drop-list">&nbsp;&nbsp; <img src="../design-templet/assets/link.png"><span
+                                    class="list-word-spacing-link">Click
+                                    a Link</span></div>
+                            <div class="list-design-bottom drop-list">&nbsp;&nbsp;&nbsp; <img src="../design-templet/assets/cta.png"><span
+                                    class="list-word-spacing">Click
+                                    a CTA</span></div>
+                        </div>
+                    </div>
+                    <div class="drop-event" id="show-time" style="margin-top:5px;">&nbsp; Time
+                        Frame&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../design-templet/assets/aero.png" height="20px"
+                            class="img-responsive aero-icon-class pull-right"></div>
+                    <div class="form-container-time-frame" id="time-frame-container">
+                        <div class="row">
+                            <input type="text" class="take-time-field" placeholder="Enter Time Frame">
+                            <div class="radio-btn-position">
+                                <div class="row">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                                        <label class="custom-control-label" for="defaultUnchecked">Hours</label>
+                                    </div>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios"
+                                            checked>
+                                        <label class="custom-control-label" for="defaultChecked">Day</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="time-fram-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script>
+    function showRight() {
+        document.getElementById('drop-cont').className = "show-right-drop";
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        $('.yes').hover(function () {
+            $('.once-row').show();
+            $('.wanna-temp').show();
+            $('.wanna-event').show();
+            $('.container1').hide();
+        });
+        $('.wanna-temp').click(function () {
+            $('.wanna-temp').hide();
+            $('.wanna-event').hide();
+            $('.container1').show();
+            $('.container-main').hide();
+            $('.templet-bar-sec').show();
+        });
+        $('.wanna-event').click(function () {
+            $('.once-row').hide();
+        });
+    });
+    $('.container1').click(function () {
+        $('.container1').css({
+            "height": "174px",
+            "width": "187px"
+        });
+        $('.container2').css({
+            "position": "relative",
+            "top": "0px",
+            "left": "34px",
+            "height": "53px",
+            "width": "18%"
+        });
+    });
+    $('.container2').click(function () {
+        $('.container2').css({
+            "height": "174px",
+            "width": "187px",
+            "position": "relative",
+            "top": "0px",
+            "left": "75px"
+        });
+        $('.container1').css({
+            "height": "53px",
+            "width": "18%"
+        });
+    });
+    $('.time-fram-btn').click(function () {
+        // $('.second-append-block').show();
+        $('.append-class').append(
+            "<br><div class='second-append-blockcenter-block'><p style='text-align:center'>Open</p><div class='two-line'></div><div class='row row-space'><div class='yes'><p class='word'>Yes</p></div><div class='no'><p class='word'>No</p></div></div></div>"
+        );
+        $('.appear-btn').hide();
+    });
+
+    $('.first-div').draggable({
+        helper: 'clone'
+    });
+    $('.drag-and-drop-container').droppable({
+        accept: '.first-div',
+        drop: function (ev, ui) {
+            var dropableItem = $(ui.draggable).clone();
+            $(this).append(dropableItem);
+            $('.drag-para-cont').css({
+                "display": "none"
+            });
+            $('.templet-bar-sec').css({
+                "display": "none"
+            });
+            $('.drag-and-drop-container').css({
+                "background-color": "white",
+                "border": "none",
+                "width": "188px"
+            });
+            $('.appear-btn').css({
+                "display": "inline"
+            });
+            $('.drag-and-drop-container').addClass("append-class");
+        }
+
+    });
+
+
+    $("#show-event").click(function () {
+        $("#list-cont-id").fadeToggle();
+    });
+    $("#show-time").click(function () {
+        $("#time-frame-container").fadeToggle();
+    });
+
+
+    $(document).ready(function () {
+        $('.container1').droppable({
+            accept: '.img1',
+            drop: function (ev, ui) {
+                var dropChildTemp = $(ui.draggable).clone();
+                $(this).append(dropChildTemp);
+                $('.drop-container-text').hide();
+                $('.container1').css({
+                    "display": "block",
+                    "height": "131px",
+                    "width": "100%",
+                    "position": "relative",
+                    "left": "-2px",
+                    "border": "none"
+                });
+                $('.appear-btn-child').show();
+                $('.appear-btn-child').click(function () {
+                    $('.templet-bar-sec').hide();
+                    $('.container-main').show();
+                    $('.appear-btn-child').hide();
+                });
+            }
+        });
+    });
+</script>
+
+</html>
+<!-- <i class="far fa-angle-down"></i> -->

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>choose template</title>
+	<title>We work</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./emailautomation.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="col-md-12 header-top" style="border:none;">
+			<div class="row main-header">
+				<img src="../design-templet/assets/leftarrow.png" alt="back-icon" class="img-responsive left-aero">
+				<p class="header-heading center-block">Building and Template Maping</p>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="building-container"></div>
+				</div>
+				<div class="col-md-6">
+					<div class="main-container"></div>
+					<button onclick="alertBox()">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<!-- <script src="./middleware.js"></script> -->
+<script type="text/javascript">
+	var fatchedArray = JSON.parse(localStorage.getItem('buildingInfoStore'));
+	console.log(fatchedArray);
+	var t_id = 0;
+	$(function () {
+		$.ajax({
+			type: "GET",
+			url: "http://127.0.0.1:8000/weDev/api/mail/template/",
+			success: function (data) {
+				console.log(data.length);
+				for (var i = 0; i < data.length; i++) {
+					// console.log(data[i].id);
+					$('.main-container').append('<div class="' + data[i].name + '"><input class="' + data[i].name + '" type="radio" id="' + data[i].id + '" onclick="chooseTemp(this.id)">' + data[i].name + '</div>');
+				}
+			}
+
+		});
+
+	});
+	$(function () {
+		$.ajax({
+			type: "GET",
+			url: "http://127.0.0.1:8000/weDev/api/mail/cityBuildingList/",
+			success: function (data) {
+				// console.log(data.id);
+				// for (var i = 0; i < data.length; i++) {
+				// 	for (var k = 0; k < fatchedArray.length; j++) {
+				// 		for (var j = 0; j < data[i].building_set.length; j++) {
+				// 			// console.log(data[i].building_set[j].buildingname);
+				// 			console.log('its working bro');
+				// 		}
+				// 	}
+				// 	$('.building-container').append('<div>' + data[i].id + '<div>');
+				// }
+			}
+
+		});
+
+	});
+
+	function chooseTemp(templateid) {
+		var temp = document.getElementById(templateid);
+		for (var i = 1; i <= 5; i++) {
+			document.getElementById(i).checked = false;
+		}
+		document.getElementById(templateid).checked = true;
+		var checkId = '#'.concat(templateid);
+		console.log(checkId);
+		$(checkId).siblings().prop("checked", false);
+		t_id = templateid;
+		console.log(t_id);
+		console.log(fatchedArray);
+		for (var i = 0; i < fatchedArray.length; i++) {
+			// fatchedArray[i].push("its working");
+			fatchedArray[i].template = t_id;
+
+		}
+		console.log(fatchedArray);
+	}
+	function alertBox() {
+
+		// alert(t_id);
+		for (var k = 0; k < fatchedArray.length; k++) {
+			console.log(fatchedArray[k]);
+			$.ajax({
+				url: 'http://127.0.0.1:8000/weDev/api/mail/cityBuildingPageTemplate/',
+				type: 'POST',
+				dataType: "json",
+				data: JSON.stringify(fatchedArray[k]),//stringify is important
+				contentType: 'application/json',
+
+
+				success: $(function () {
+
+					console.log("added succesfull");
+				})
+			});
+		}
+
+	}
+	// for(var k=0;k<fatchedArray.length;k++){
+				// 	data: JSON.stringify(fatchedArray[k]),
+			 	//stringify is important
+				// console.log("Data", JSON.stringify(fatchedArray[0]));
+				// },
+
+</script>
+
+</html>

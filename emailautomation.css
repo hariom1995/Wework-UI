@@ -1,0 +1,208 @@
+.header-top {
+  border: 1px solid black;
+}
+.main-header {
+  border: none;
+  box-shadow: 0px 3px 0px 0px whitesmoke;
+}
+.left-aero {
+  height: 19px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+.header-heading {
+  position: relative;
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 19px;
+  color: #707070;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.start-journey-img{
+     height: 295px;
+  margin-top: 8rem;
+}
+.searchbox{
+    width: 98%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5625rem;
+    height: 2.6rem;
+    border-radius: 1.2rem;
+    border: 2px solid #dbdbdb;
+    outline: none;
+    /* text-align: center; */
+    background-image: url(../design-templet/assets/search.png);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 19px 19px;
+}
+::placeholder {
+  color: #8c8c8c;
+  position:relative;
+  left:16px;
+}
+:-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ color: #8c8c8c;
+  position:relative;
+  left:16px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #8c8c8c;
+  position:relative;
+  left:16px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #8c8c8c;
+  position:relative;
+  left:16px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #8c8c8c;
+  position:relative;
+  left:16px;
+}
+.grand-parent-city{
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+    height: 52px;
+    margin-top: 2.2rem;
+    border-left: 4px solid #626262;
+    cursor: pointer;
+}
+.pull-right1{
+    display: block;
+    margin-left: auto;
+}
+.city-word{
+ color: #636363;
+    font-size: 21px;
+    display: block;
+    margin-top: 3%;
+    margin-left: 4%;
+    font-weight: 500;
+
+}
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    border: 2px solid #626262;
+    border-radius: 3px;
+    background-color: white;
+}
+
+input[type="checkbox"]:checked:after {
+  content: "";
+    display: block;
+    width: 5px;
+    height: 9px;
+    border: solid #01daed;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 7px;
+}
+ul {
+  list-style-type: none;
+  /* height: 20px; */
+}
+.city-font-style{
+  color: #626262;
+    font-size: 19px;
+    font-weight: 500;
+    margin-left: 19px;
+}
+.building-font-style{
+      margin-left: 4%;
+    font-size: 17px;
+    /* padding-bottom: 5px; */
+    /* margin-top: 10px; */
+    font-weight: 500;
+    color: #626262;
+}
+ul li{
+  padding: 9px;
+}
+.city-block-in-name{
+  padding: 11px;
+    /* background: #f9f9f9; */
+    /* border-left: 3px solid #626262; */
+    background-image: url(../design-templet/assets/downaero.png); 
+    background-repeat: no-repeat;
+    background-position: 98%;
+    cursor: pointer;
+}
+.city-block-in-name11{
+  padding: 11px;
+    background: #f9f9f9;
+    border-left: 3px solid #01daed;
+    background-image: url(../design-templet/assets/downaero.png); 
+    background-repeat: no-repeat;
+    background-position: 98%;
+    cursor: pointer;
+}
+.mainBuildingClass{
+  display: none;
+}
+.clickable{
+  height: 48px;
+    position: absolute;
+    top: 2px;
+    width: 73%;
+    background: none;
+    display: inline-block;
+}
+#grand_parent{
+  display: none;
+}
+.my-button{
+  margin-left: 4%;
+    margin-top: 2%;
+    border: 2px solid #626262;
+    background: none;
+    border-radius: 3px;
+    width: 20%;
+    height: 39px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+}
+.my-button:hover{
+  margin-left: 4%;
+    margin-top: 2%;
+    border: 2px solid #626262;
+    background: #626262;
+    border-radius: 3px;
+    width: 20%;
+    height: 39px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+}
+/* ---------------Next.html------------------- */

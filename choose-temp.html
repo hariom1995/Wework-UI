@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--Import Google Icon Font-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- external css -->
+    <!-- <link rel="stylesheet" href="./main.css"> -->
+    <!-- Bootstrap Css CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Bootstrap JS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <style>
+        .first-line {
+            height: 30px;
+            width: 2px;
+            background-color: black;
+        }
+
+        .two-line {
+            height: 147px;
+            width: 147px;
+            margin-left: 79px;
+            border: 2px solid #707070;
+            -ms-transform: rotate(20deg);
+            -webkit-transform: rotate(20deg);
+            transform: rotate(44deg);
+            margin-top: 39px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .second-line {
+            height: 30px;
+            width: 2px;
+            background-color: black;
+
+        }
+
+        .yes {
+            background: white;
+            position: relative;
+            top: -104px;
+            left: 42px;
+            border: 2px solid #0c7012;
+            transform: rotate(-45deg);
+            padding: 6px;
+            border-radius: 4px;
+        }
+        .yes:hover{
+            box-shadow: 0px 0px 1px grey, 0 0 25px grey, 0 0 5px darkgreen;
+            cursor: pointer;
+            color: #0c7012;
+        }
+        .no {
+            position: relative;
+            top: -104px;
+            left: 187px;
+            background-color: white;
+            border: 2px solid #ee0f0f;
+            transform: rotate(-45deg);
+            padding: 6px;
+            border-radius: 4px;
+        }
+        .no:hover{
+        box-shadow: 0px 0px 1px grey, 0 0 25px grey, 0 0 5px darkred;
+        cursor: pointer;
+        color: #ee0f0f;
+        }
+
+        .word {
+            text-align: center;
+            padding: 4px 7px 0px 16px;
+            padding-bottom: 0px;
+            transform: rotate(45deg);
+        }
+
+        .container1 {
+            display: none;
+            border: 1px dashed #01daed;
+            padding: 12px 4px 12px 4px;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            left: 19px;
+            top: 0px;
+            background: #   f9ffff;
+        }
+
+        .container2 {
+            display: none;
+            border: 1px dashed #01daed;
+            padding: 12px 4px 12px 4px;
+            position: relative;
+            width: 18%;
+            text-align: center;
+            left: 105px;
+            top: 0px;
+            background: #f9ffff;
+        }
+
+        .temp-container {
+            height: 107px;
+            width: 140px;
+            border: 1px solid black;
+        }
+
+        .verticle-line {
+            width: 1px;
+            height: 30px;
+            border: 1px solid black;
+            position: relative;
+            left: 68px;
+        }
+
+        .event-btn-pos {
+            position: relative;
+            left: 18px;
+        }
+
+        .drop-event {
+            border: 2px solid #b6b6b6;
+            color: #b6b6b6;
+            width: 37%;
+            padding: 11px;
+            font-weight: 450;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .aero-icon-class {
+            position: relative;
+            margin-left: 59%;
+        }
+
+        .list-container {
+            border: 2px solid #01daed;
+            width: 37%;
+            /* display: none; */
+        }
+
+        .list-design {
+            color: #616161;
+            border-bottom: 1px solid#707070;
+            font-size: 20px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .list-design-bottom {
+            color: #616161;
+            /* border-bottom: 1px solid#707070; */
+            font-size: 20px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .list-word-spacing {
+            position: relative;
+            margin-left: 9%;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .list-word-spacing-link {
+            position: relative;
+            margin-left: 8%;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .form-container-time-frame {
+            margin-top: 6px;
+    border: 2px solid #01daed;
+    width: 37%;
+    margin-bottom: 20px;
+    padding: 7px 35px 10px 69px;
+    display: none;
+        }
+        .radio-btn-position{
+                position: relative;
+    margin-left: 6%;
+    margin-top: 5%;
+        }
+        
+        /* #list-cont-id {
+            display: none;
+        } */
+        .take-time-field{
+            position: relative;
+    width: 36%;
+    margin-top: 3%;
+    margin-left: 5%;
+    height: 41px;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: #007bff;
+    margin-bottom: 3%;
+    color: #b6b6b6;
+    font-weight: 400;
+    font-size: 100%;
+    text-align: center;
+        }
+        .time-fram-btn{
+            position: relative;
+    margin-left: 2%;
+    width: 79%;
+    background: #007bff;
+    border: 1px solid #007bff;
+    margin-bottom: 3%;
+    padding: 5px;
+    margin-top: 2%;
+    border-radius: 3px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+        }
+        .row-space{
+            margin-top: 8px;
+        }
+        .once-row{
+            display: none;
+margin-top: -92px;
+width: 21%;
+        }
+.drop-row{
+margin-top: -92px;
+width: 21%;
+}
+.wanna-temp,.wanna-event{
+padding: 9px;
+background: white;
+color: #0c7012;
+font-weight: 500;
+border: 2px solid #0c7012;
+border-radius: 3px;
+position: relative;
+margin-top: 2px;
+}
+.wanna-temp:hover, .wanna-event:hover{
+padding: 9px;
+background: #0c7012;
+color: white;
+font-weight: 500;
+border: 2px solid #0c7012;
+border-radius: 3px;
+cursor: pointer;
+position: relative;
+margin-top: 2px;
+}
+.remove-row-once{
+    display: none;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="col-md-6">
+            <div class="second-append-block">
+                <p style="text-align:center">Open</p>
+                <div class="two-line"></div>
+                <div class="row row-space">
+                    <div class="yes">
+                        <p class="word">Yes</p>
+                    </div>
+                    <div class="no">
+                        <p class="word">No</p>
+                    </div>
+                </div>
+            </div>
+            <div class="once-row" id="btn-container">
+                <div class="wanna-temp">Add Template</div>
+                <div class="wanna-event">Add Event</div>
+            </div>
+            <div class="row drop-row">
+                <div class="container1">Drop Template</div>
+                <div class="container2">Drop Template</div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="main-append-div">
+                <div class="temp-container"></div>
+                <div class="verticle-line"></div>
+                <button class="btn btn-primary event-btn-pos">Add event</button>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="common-box-event">
+                <div class="drop-event" id="show-event">&nbsp; Choose events <img src="../design-templet/assets/aero.png"
+                        height="20px" class="img-responsive aero-icon-class pull-right"></div>
+                <div class="list-container" id="list-cont-id">
+                    <div class="list-design">&nbsp;&nbsp;&nbsp; <img src="../design-templet/assets/book.png"><span
+                            class="list-word-spacing">Opened</span></div>
+                    <div class="list-design">&nbsp;&nbsp; <img src="../design-templet/assets/notopen.png"><span class="list-word-spacing">Not
+                            Opened</span></div>
+                    <div class="list-design">&nbsp;&nbsp; <img src="../design-templet/assets/link.png"><span class="list-word-spacing-link">Click
+                            a Link</span></div>
+                    <div class="list-design-bottom">&nbsp;&nbsp;&nbsp; <img src="../design-templet/assets/cta.png"><span
+                            class="list-word-spacing">Click a CTA</span></div>
+                </div>
+                <div class="drop-event" id="show-time" style="margin-top:5px;">&nbsp; Time
+                    Frame&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../design-templet/assets/aero.png" height="20px"
+                        class="img-responsive aero-icon-class pull-right"></div>
+                <div class="form-container-time-frame" id="time-frame-container">
+                    <div class="row">
+                        <input type="text" class="take-time-field" placeholder="Enter Time Frame">
+                        <div class="radio-btn-position">
+                            <div class="row">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
+                                    <label class="custom-control-label" for="defaultUnchecked">Hours</label>
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios"
+                                        checked>
+                                    <label class="custom-control-label" for="defaultChecked">Day</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="time-fram-btn">Submit</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="test-div">
+            <div class="col-md-6">
+                <div class="second-append-block">
+                    <p style="text-align:center">Open</p>
+                    <div class="two-line"></div>
+                    <div class="row row-space">
+                        <div class="yes">
+                            <p class="word">Yes</p>
+                        </div>
+                        <div class="no">
+                            <p class="word">No</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row once-row">
+                    <div class="container1">Drop Template</div>
+                    <div class="container2">Drop Template</div>
+                </div>
+            </div>
+</body>
+<script>
+    // function rmvChooseOption() {
+    //     document.getElementById('btn-container').className = ".row-once";
+    // }
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.yes').hover(function () {
+            $('.once-row').show();
+            $('.container1').hide();
+        });
+        $('.wanna-temp').click(function () {
+            $('.once-row').hide();
+            $('.container1').show();
+        });
+        $('.wanna-event').click(function () {
+            $('.once-row').hide();
+        });
+    });
+    $('.container1').click(function () {
+        $('.container1').css({
+            "height": "174px",
+            "width": "187px"
+        });
+        $('.container2').css({
+            "position": "relative",
+            "top": "0px",
+            "left": "34px",
+            "height": "53px",
+            "width": "18%"
+        });
+    });
+    $('.container2').click(function () {
+        $('.container2').css({
+            "height": "174px",
+            "width": "187px",
+            "position": "relative",
+            "top": "0px",
+            "left": "75px"
+        });
+        $('.container1').css({
+            "height": "53px",
+            "width": "18%"
+        });
+    });
+    $("#show-event").click(function () {
+        $("#list-cont-id").fadeToggle();
+    });
+    $("#show-time").click(function () {
+        $("#time-frame-container").fadeToggle();
+    });
+</script>
+<!-- <script>
+    function dropToggle() {
+        console.log('hey its executing');
+        var x = document.getElementById("list-cont-id");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            console.log('its also executing');
+        }
+        console.log('hey its executing');
+    }
+</script> -->
+
+</html>

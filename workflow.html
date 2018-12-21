@@ -1,0 +1,92 @@
+<!-- https://drive.google.com/drive/u/0/folders/1FbVgFbW2HYt9RL__G8us1hrVBZKgoRO4?ogsrc=32 -->
+<html>
+
+<head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- external css -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- Bootstrap Css CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Bootstrap JS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-md-12 header-top" style="border:none;">
+            <div class="row main-header">
+                <img src="../design-templet/assets/leftarrow.png" alt="back-icon" class="img-responsive left-aero">
+                <p class="header-heading center-block">Choose Your city</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7">
+                <img src="../design-templet/assets/start.png" alt="start journey image" class="image-responsive center-block start-journey-img">
+            </div>
+            <div class="col-md-5 left-border">
+                <input type="text" class="search-box center-block" placeholder="search page name or group name">
+                <div class="start-page-dropdown center-block"><span class="start-page-drop-word">Cities <img src="../design-templet/assets/downaero.png"
+                            class="img-responsive toggle-img pull-right" alt=""></div>
+                <div class="start-drop-container">
+                    <ul class="city-list">
+                    </ul>
+                </div>
+                <button class="next-btn">Next</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        var count = 1;
+        $('.start-page-dropdown').click(function () {
+            if (count == 1) {
+                $('.city-list').fadeIn();
+                $('.toggle-img').attr("src", "../design-templet/assets/upaero.png");
+                $('.start-page-dropdown').css({
+                    "border-left": "5px solid #01daed"
+                });
+                count = 2;
+            } else if (count == 2) {
+                $('.city-list').fadeOut();
+                $('.toggle-img').attr("src", "../design-templet/assets/downaero.png");
+                $('.start-page-dropdown').css({
+                    "border-left": "none"
+                });
+                count = 1;
+            }
+        });
+        // $(function () {
+        //     $(document).on('click', '.bangalore-list', function (e) {
+        //         $('.bang-build').attr('checked', this.checked);
+        //         e.stopPropagation();
+        //     });
+        //     $(".bang-build").click(function () {
+        //         if ($(".bang-build").length == $(".bang-build:checked").length) {
+        //             $(".bangalore-list").attr("checked", "checked");
+        //         } else {
+        //             $(".bangalore-list").removeAttr("checked");
+        //         }
+        //     });
+        // });
+    });
+    
+</script>
+<script src="./ajax.js"></script>
+
+</html>
